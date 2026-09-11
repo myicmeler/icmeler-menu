@@ -133,7 +133,7 @@ export default function IcmelerTableFinder() {
         }
       `}</style>
 
-      <div style={{ maxWidth: 480, margin: "0 auto", padding: "18px 14px 60px" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "18px 14px 60px" }}>
         {/* Header strip */}
         <div
           style={{
@@ -202,8 +202,15 @@ export default function IcmelerTableFinder() {
           </div>
         )}
 
-        {/* Results */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+        {/* Results — single column on phone, fluidly adds columns on wider screens */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
+            gap: 10,
+            alignItems: "start",
+          }}
+        >
           {results.map((r) => {
             const isOpen = expanded.has(r.id);
             const hasPhotos = r.photos && r.photos.length > 0;
