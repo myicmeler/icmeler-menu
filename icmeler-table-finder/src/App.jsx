@@ -11,184 +11,20 @@ import {
   Images,
   X,
 } from "lucide-react";
+import RESTAURANTS from "./data/restaurants.json";
 
-// ---- Sample data (placeholder) --------------------------------------
-// Fictional venues/prices/addresses/numbers/photos for layout & interaction
-// demo only. Swap this array for a live feed from Icmeler_Prices_Enhanced.xlsx
-// (plus real photo URLs) before this goes anywhere near production.
+// ---- Data ------------------------------------------------------------
+// RESTAURANTS is loaded from ./data/restaurants.json — generated from
+// Icmeler_Prices_Enhanced.xlsx (7 restaurants, 363 menu items, real prices).
+// Menu/pricing data is real. score, reviews, address, mapUrl, whatsapp and
+// photos are not in the price guide and come through as null/[] until
+// sourced separately — the UI below renders sensible fallbacks for those
+// rather than assuming they're populated.
 
-const RESTAURANTS = [
-  {
-    id: "liman-sofrasi",
-    name: "Liman Sofrası",
-    cuisine: "Turkish",
-    tier: 1,
-    waterfront: true,
-    score: 8.9,
-    reviews: 412,
-    avgPrice: 350,
-    address: "Kayabaşı Cd. 12, İçmeler",
-    mapUrl: "https://www.google.com/maps/search/?api=1&query=Kayaba%C5%9F%C4%B1+Cd.+12+I%C3%A7meler",
-    whatsapp: "905000000001",
-    photos: [
-      { color: "linear-gradient(135deg, #4A7A8C, #17384A)", caption: "Harbour terrace" },
-      { color: "linear-gradient(135deg, #B8502F, #6B3A22)", caption: "Grilled sea bass" },
-      { color: "linear-gradient(135deg, #6F7D4A, #3C4527)", caption: "Meze spread" },
-    ],
-    menu: [
-      { category: "Meze", items: [
-        { name: "Sigara böreği", price: 140 },
-        { name: "Ezme", price: 120 },
-        { name: "Haydari", price: 110 },
-      ]},
-      { category: "Mains", items: [
-        { name: "Grilled sea bass (whole)", price: 650 },
-        { name: "Chicken şiş", price: 280 },
-        { name: "Köfte plate", price: 260 },
-      ]},
-    ],
-  },
-  {
-    id: "deniz-kenari",
-    name: "Deniz Kenarı Balık",
-    cuisine: "Seafood",
-    tier: 3,
-    waterfront: true,
-    score: 9.4,
-    reviews: 1180,
-    avgPrice: 900,
-    address: "Sahil Yolu 45, İçmeler",
-    mapUrl: "https://www.google.com/maps/search/?api=1&query=Sahil+Yolu+45+I%C3%A7meler",
-    whatsapp: "905000000002",
-    photos: [
-      { color: "linear-gradient(135deg, #235A72, #0F2E3B)", caption: "Fish counter" },
-      { color: "linear-gradient(135deg, #4A9FBF, #1D5266)", caption: "Sunset view" },
-    ],
-    menu: [
-      { category: "Starters", items: [
-        { name: "Grilled octopus", price: 380 },
-        { name: "Calamari", price: 290 },
-      ]},
-      { category: "Fish (per kg)", items: [
-        { name: "Sea bream", price: 1400 },
-        { name: "Sea bass", price: 1600 },
-        { name: "Grouper", price: 2200 },
-      ]},
-    ],
-  },
-  {
-    id: "nazar-meze",
-    name: "Nazar Meze House",
-    cuisine: "Turkish",
-    tier: 2,
-    waterfront: false,
-    score: 9.1,
-    reviews: 305,
-    avgPrice: 420,
-    address: "Çarşı Sk. 8, İçmeler",
-    mapUrl: "https://www.google.com/maps/search/?api=1&query=%C3%87ar%C5%9F%C4%B1+Sk.+8+I%C3%A7meler",
-    whatsapp: "905000000003",
-    photos: [
-      { color: "linear-gradient(135deg, #8A5A2E, #4A2F17)", caption: "Rakı table" },
-      { color: "linear-gradient(135deg, #B8863C, #6B4C1E)", caption: "Backstreet entrance" },
-      { color: "linear-gradient(135deg, #6F7D4A, #3C4527)", caption: "Mixed grill" },
-    ],
-    menu: [
-      { category: "Meze (small)", items: [
-        { name: "Patlıcan salatası", price: 130 },
-        { name: "Cacık", price: 100 },
-        { name: "Fava", price: 120 },
-      ]},
-      { category: "Grill", items: [
-        { name: "Lamb şiş", price: 320 },
-        { name: "Mixed grill (2 people)", price: 780 },
-      ]},
-    ],
-  },
-  {
-    id: "marina-trattoria",
-    name: "Marina Trattoria",
-    cuisine: "Italian",
-    tier: 2,
-    waterfront: true,
-    score: 8.6,
-    reviews: 267,
-    avgPrice: 400,
-    address: "Marina Blv. 3, İçmeler",
-    mapUrl: "https://www.google.com/maps/search/?api=1&query=Marina+Blv.+3+I%C3%A7meler",
-    whatsapp: "905000000004",
-    photos: [
-      { color: "linear-gradient(135deg, #7A3B2E, #401D16)", caption: "Wood-fired pizza" },
-      { color: "linear-gradient(135deg, #4A7A8C, #17384A)", caption: "Marina view" },
-    ],
-    menu: [
-      { category: "Pasta", items: [
-        { name: "Spaghetti vongole", price: 340 },
-        { name: "Penne arrabbiata", price: 260 },
-      ]},
-      { category: "Pizza", items: [
-        { name: "Margherita", price: 280 },
-        { name: "Quattro formaggi", price: 340 },
-      ]},
-    ],
-  },
-  {
-    id: "cafe-badem",
-    name: "Café Badem",
-    cuisine: "Café",
-    tier: 1,
-    waterfront: false,
-    score: 9.0,
-    reviews: 588,
-    avgPrice: 180,
-    address: "Atatürk Cd. 21, İçmeler",
-    mapUrl: "https://www.google.com/maps/search/?api=1&query=Atat%C3%BCrk+Cd.+21+I%C3%A7meler",
-    whatsapp: "905000000005",
-    photos: [
-      { color: "linear-gradient(135deg, #6B4C2E, #3A2817)", caption: "Turkish breakfast" },
-      { color: "linear-gradient(135deg, #B8863C, #6B4C1E)", caption: "Courtyard seating" },
-    ],
-    menu: [
-      { category: "Breakfast", items: [
-        { name: "Turkish breakfast (2 people)", price: 420 },
-        { name: "Menemen", price: 190 },
-      ]},
-      { category: "Drinks", items: [
-        { name: "Turkish coffee", price: 70 },
-        { name: "Fresh orange juice", price: 90 },
-      ]},
-    ],
-  },
-  {
-    id: "rakı-bar-marina",
-    name: "Marina Rakı Bar",
-    cuisine: "Drinks",
-    tier: 2,
-    waterfront: true,
-    score: 8.8,
-    reviews: 221,
-    avgPrice: 300,
-    address: "Marina Blv. 9, İçmeler",
-    mapUrl: "https://www.google.com/maps/search/?api=1&query=Marina+Blv.+9+I%C3%A7meler",
-    whatsapp: "905000000006",
-    photos: [
-      { color: "linear-gradient(135deg, #4A2F17, #8A5A2E)", caption: "Sunset cocktails" },
-      { color: "linear-gradient(135deg, #17384A, #4A7A8C)", caption: "Marina bar" },
-    ],
-    menu: [
-      { category: "Cocktails", items: [
-        { name: "Mojito", price: 260 },
-        { name: "Aperol spritz", price: 280 },
-      ]},
-      { category: "Beer & rakı", items: [
-        { name: "Efes (pint)", price: 150 },
-        { name: "Rakı (double)", price: 220 },
-      ]},
-    ],
-  },
+const CUISINES = [
+  "All cuisines",
+  ...Array.from(new Set(RESTAURANTS.map((r) => r.cuisine))).sort(),
 ];
-
-const CUISINES = ["All cuisines", "Turkish", "Seafood", "Italian", "Café", "Drinks"];
 const TIERS = ["Any price", "₺", "₺₺", "₺₺₺"];
 
 function matches(restaurant, query) {
@@ -210,8 +46,7 @@ const selectStyle = {
   border: "1px solid #4A4A50",
   borderRadius: 8,
   padding: "7px 8px",
-  fontSize: 16,
-  minHeight: 44,
+  fontSize: 12,
   fontFamily: "inherit",
   outline: "none",
   flex: 1,
@@ -232,7 +67,7 @@ export default function IcmelerTableFinder() {
       .filter((r) => r.matchInfo.hit)
       .filter((r) => cuisine === "All cuisines" || r.cuisine === cuisine)
       .filter((r) => tier === 0 || r.tier === tier)
-      .sort((a, b) => b.score - a.score);
+      .sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
   }, [query, cuisine, tier]);
 
   function toggle(id) {
@@ -248,6 +83,7 @@ export default function IcmelerTableFinder() {
   function stepPhoto(delta) {
     if (!gallery || !activeRestaurant) return;
     const len = activeRestaurant.photos.length;
+    if (len === 0) return;
     setGallery({ ...gallery, index: (gallery.index + delta + len) % len });
   }
 
@@ -263,37 +99,13 @@ export default function IcmelerTableFinder() {
     >
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        * { box-sizing: border-box; }
-        body { margin: 0; background: #2A2A2D; }
-        button, input, select { font-family: inherit; }
-        button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
-          outline: 2px solid #F2A93B; outline-offset: 3px;
-        }
-        .page-shell { max-width: 1440px; margin: 0 auto; padding: 20px 14px 60px; }
-        .page-title { font-size: clamp(18px, 2.5vw, 30px); font-weight: 700; color: #F2A93B; }
-        .search-controls { display: grid; gap: 10px; margin-bottom: 20px; }
-        .filter-controls { display: flex; gap: 8px; min-width: 0; }
-        .results-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; align-items: start; }
-        .restaurant-card { min-width: 0; overflow-wrap: anywhere; border-radius: 10px; padding: 16px; }
-        .gallery-panel { width: 100%; max-width: 720px; max-height: calc(100dvh - 32px); overflow-y: auto; }
-        .gallery-image { position: relative; height: clamp(160px, 50vw, 400px); max-height: 60dvh; }
-        @media (min-width: 700px) {
-          .page-shell { padding: 32px 24px 64px; }
-          .results-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-          .search-controls { grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr); }
-        }
-        @media (min-width: 1100px) {
-          .page-shell { padding: 40px 32px 72px; }
-          .results-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-        }
         select option { background: #3A3A3F; color: #F5F5F4; }
         .card { background: #35353A; border: 1px solid #45454B; }
         .pill-cta {
           display: inline-flex;
           align-items: center;
           gap: 4px;
-          font-size: 12px;
-          min-height: 44px;
+          font-size: 11px;
           font-weight: 600;
           border-radius: 16px;
           padding: 5px 9px;
@@ -311,8 +123,8 @@ export default function IcmelerTableFinder() {
           background: rgba(0,0,0,0.35);
           border: none;
           color: #F5F5F4;
-          width: 44px;
-          height: 44px;
+          width: 32px;
+          height: 32px;
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -321,21 +133,19 @@ export default function IcmelerTableFinder() {
         }
       `}</style>
 
-      <div className="page-shell">
+      <div style={{ maxWidth: 480, margin: "0 auto", padding: "18px 14px 60px" }}>
         {/* Header strip */}
         <div
           style={{
             display: "flex",
             justifyContent: "space-between",
             alignItems: "baseline",
-            flexWrap: "wrap",
-            gap: 8,
             paddingBottom: 10,
             borderBottom: "1px solid #F2A93B44",
             marginBottom: 14,
           }}
         >
-          <span className="page-title">
+          <span style={{ fontSize: 16, fontWeight: 700, color: "#F2A93B" }}>
             İçmeler · Table Finder
           </span>
           <span style={{ fontSize: 11, color: "#9A9A9E" }}>
@@ -343,7 +153,6 @@ export default function IcmelerTableFinder() {
           </span>
         </div>
 
-        <div className="search-controls">
         {/* Search bar */}
         <div
           className="card"
@@ -353,12 +162,11 @@ export default function IcmelerTableFinder() {
             gap: 8,
             padding: "9px 12px",
             borderRadius: 9,
-            minWidth: 0,
+            marginBottom: 8,
           }}
         >
           <Search size={15} color="#F2A93B" />
           <input
-            aria-label="Search restaurants or dishes"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Try 'sea bass', 'meze'…"
@@ -366,9 +174,7 @@ export default function IcmelerTableFinder() {
               border: "none",
               outline: "none",
               background: "transparent",
-              fontSize: 16,
-              minWidth: 0,
-              minHeight: 26,
+              fontSize: 13,
               flex: 1,
               fontFamily: "inherit",
               color: "#F5F5F4",
@@ -377,19 +183,17 @@ export default function IcmelerTableFinder() {
         </div>
 
         {/* Dropdown filters — cuisine (incl. Drinks) + price */}
-        <div className="filter-controls">
-          <select aria-label="Cuisine" value={cuisine} onChange={(e) => setCuisine(e.target.value)} style={selectStyle}>
+        <div style={{ display: "flex", gap: 6, marginBottom: 16 }}>
+          <select value={cuisine} onChange={(e) => setCuisine(e.target.value)} style={selectStyle}>
             {CUISINES.map((c) => (
               <option key={c} value={c}>{c}</option>
             ))}
           </select>
-          <select aria-label="Price tier" value={tierLabel} onChange={(e) => setTierLabel(e.target.value)} style={selectStyle}>
+          <select value={tierLabel} onChange={(e) => setTierLabel(e.target.value)} style={selectStyle}>
             {TIERS.map((t) => (
               <option key={t} value={t}>{t}</option>
             ))}
           </select>
-        </div>
-
         </div>
 
         {results.length === 0 && (
@@ -399,20 +203,23 @@ export default function IcmelerTableFinder() {
         )}
 
         {/* Results */}
-        <div className="results-grid">
+        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           {results.map((r) => {
             const isOpen = expanded.has(r.id);
+            const hasPhotos = r.photos && r.photos.length > 0;
             return (
-              <div key={r.id} className="card restaurant-card">
+              <div key={r.id} className="card" style={{ borderRadius: 10, padding: "12px 14px" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 10 }}>
                   <div>
-                    <div style={{ fontSize: 19, fontWeight: 700, color: "#F2A93B" }}>{r.score.toFixed(1)}</div>
+                    <div style={{ fontSize: 19, fontWeight: 700, color: "#F2A93B" }}>
+                      {r.score != null ? r.score.toFixed(1) : "—"}
+                    </div>
                     <div style={{ fontSize: 9.5, color: "#9A9A9E", letterSpacing: 0.3 }}>
-                      {r.reviews.toLocaleString()} REVIEWS
+                      {r.reviews != null ? `${r.reviews.toLocaleString()} REVIEWS` : "RATING PENDING"}
                     </div>
                   </div>
 
-                  <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{ flex: 1 }}>
                     <div style={{ fontSize: 15, fontWeight: 700, color: "#F5F5F4" }}>{r.name}</div>
                     <div style={{ fontSize: 12, color: "#B4B4B8", marginTop: 2 }}>
                       {r.cuisine} · {"₺".repeat(r.tier)} · ~₺{r.avgPrice} pp
@@ -422,7 +229,9 @@ export default function IcmelerTableFinder() {
                         </span>
                       )}
                     </div>
-                    <div style={{ fontSize: 11, color: "#9A9A9E", marginTop: 3 }}>{r.address}</div>
+                    {r.address && (
+                      <div style={{ fontSize: 11, color: "#9A9A9E", marginTop: 3 }}>{r.address}</div>
+                    )}
                     {r.matchInfo.dish && (
                       <div style={{ fontSize: 11, color: "#F2A93B", marginTop: 3 }}>
                         matched: {r.matchInfo.dish}
@@ -435,32 +244,39 @@ export default function IcmelerTableFinder() {
                   style={{
                     marginTop: 10,
                     display: "flex",
-                    flexWrap: "wrap",
+                    flexWrap: "nowrap",
                     justifyContent: "flex-start",
                     gap: 5,
+                    overflowX: "auto",
                     paddingBottom: 2,
                   }}
                 >
-                  <button
-                    className="pill-cta pill-photos"
-                    onClick={() => setGallery({ restaurantId: r.id, index: 0 })}
-                    style={{ flexShrink: 0 }}
-                  >
-                    <Images size={11} />
-                    Photos ({r.photos.length})
-                  </button>
-                  <a className="pill-cta pill-map" href={r.mapUrl} target="_blank" rel="noopener noreferrer" style={{ flexShrink: 0 }}>
-                    <Navigation size={11} />
-                    Map
-                  </a>
-                  <a className="pill-cta pill-whatsapp" href={`https://wa.me/${r.whatsapp}`} target="_blank" rel="noopener noreferrer" style={{ flexShrink: 0 }}>
-                    <MessageCircle size={11} />
-                    WhatsApp
-                  </a>
-                  <button type="button" aria-expanded={isOpen} className="pill-cta pill-menu" onClick={() => toggle(r.id)} style={{ flexShrink: 0 }}>
+                  {hasPhotos && (
+                    <button
+                      className="pill-cta pill-photos"
+                      onClick={() => setGallery({ restaurantId: r.id, index: 0 })}
+                      style={{ flexShrink: 0 }}
+                    >
+                      <Images size={11} />
+                      Photos ({r.photos.length})
+                    </button>
+                  )}
+                  {r.mapUrl && (
+                    <a className="pill-cta pill-map" href={r.mapUrl} target="_blank" rel="noopener noreferrer" style={{ flexShrink: 0 }}>
+                      <Navigation size={11} />
+                      Map
+                    </a>
+                  )}
+                  {r.whatsapp && (
+                    <a className="pill-cta pill-whatsapp" href={`https://wa.me/${r.whatsapp}`} target="_blank" rel="noopener noreferrer" style={{ flexShrink: 0 }}>
+                      <MessageCircle size={11} />
+                      WhatsApp
+                    </a>
+                  )}
+                  <div className="pill-cta pill-menu" onClick={() => toggle(r.id)} style={{ flexShrink: 0 }}>
                     {isOpen ? "Hide menu" : "View menu"}
                     {isOpen ? <ChevronUp size={11} /> : <ChevronDown size={11} />}
-                  </button>
+                  </div>
                 </div>
 
                 {isOpen && (
@@ -482,9 +298,9 @@ export default function IcmelerTableFinder() {
                               fontWeight: r.matchInfo.dish === item.name ? 600 : 400,
                             }}
                           >
-                            <span style={{ minWidth: 0, overflowWrap: "anywhere" }}>{item.name}</span>
+                            <span>{item.name}</span>
                             <span className="dotted-leader" />
-                            <span style={{ flexShrink: 0 }}>₺{item.price}</span>
+                            <span>₺{item.price}</span>
                           </div>
                         ))}
                       </div>
@@ -497,12 +313,12 @@ export default function IcmelerTableFinder() {
         </div>
 
         <p style={{ marginTop: 24, fontSize: 10.5, color: "#77777C", textAlign: "center" }}>
-          Prototype — sample data for layout only. Swap in your live price list, real addresses, WhatsApp numbers and real photos before this goes anywhere near a follower.
+          Prices sourced from the live İçmeler price guide. Ratings, addresses, WhatsApp numbers and real photos are still being sourced per venue.
         </p>
       </div>
 
       {/* Photo carousel popup */}
-      {gallery && activeRestaurant && (
+      {gallery && activeRestaurant && activeRestaurant.photos.length > 0 && (
         <div
           onClick={() => setGallery(null)}
           style={{
@@ -517,30 +333,27 @@ export default function IcmelerTableFinder() {
           }}
         >
           <div
-            className="gallery-panel"
-            role="dialog"
-            aria-modal="true"
-            aria-label={`${activeRestaurant.name} photos`}
             onClick={(e) => e.stopPropagation()}
             style={{
               width: "100%",
+              maxWidth: 380,
               background: "#1E1E20",
               borderRadius: 12,
+              overflow: "hidden",
               border: "1px solid #45454B",
             }}
           >
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "10px 14px" }}>
               <span style={{ fontSize: 13, fontWeight: 700, color: "#F5F5F4" }}>{activeRestaurant.name}</span>
               <button
-                aria-label="Close photos"
                 onClick={() => setGallery(null)}
-                style={{ background: "transparent", border: "none", color: "#9A9A9E", cursor: "pointer", minWidth: 44, minHeight: 44, flexShrink: 0 }}
+                style={{ background: "transparent", border: "none", color: "#9A9A9E", cursor: "pointer" }}
               >
                 <X size={18} />
               </button>
             </div>
 
-            <div className="gallery-image" style={{ background: activeRestaurant.photos[gallery.index].color }}>
+            <div style={{ position: "relative", height: 220, background: activeRestaurant.photos[gallery.index].color }}>
               <div
                 style={{
                   position: "absolute",
@@ -560,7 +373,6 @@ export default function IcmelerTableFinder() {
                 <>
                   <button
                     className="modal-nav"
-                    aria-label="Previous photo"
                     onClick={() => stepPhoto(-1)}
                     style={{ position: "absolute", left: 8, top: "50%", transform: "translateY(-50%)" }}
                   >
@@ -568,7 +380,6 @@ export default function IcmelerTableFinder() {
                   </button>
                   <button
                     className="modal-nav"
-                    aria-label="Next photo"
                     onClick={() => stepPhoto(1)}
                     style={{ position: "absolute", right: 8, top: "50%", transform: "translateY(-50%)" }}
                   >
