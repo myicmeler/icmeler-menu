@@ -1,0 +1,4 @@
+[build]
+  base = "icmeler-table-finder"
+  command = "npm run build"
+  publish = "dist"
