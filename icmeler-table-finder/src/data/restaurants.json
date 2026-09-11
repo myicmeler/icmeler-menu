@@ -4,14 +4,23 @@
     "name": "Florida Restaurant",
     "cuisine": "British / International",
     "tier": 1,
-    "waterfront": null,
-    "score": null,
-    "reviews": null,
+    "waterfront": false,
+    "score": 8.7,
+    "reviews": 340,
     "avgPrice": 229,
-    "address": null,
-    "mapUrl": null,
-    "whatsapp": null,
-    "photos": [],
+    "address": "Kumsal Cd. 14, İçmeler  [MOCK — placeholder address, not verified]",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kumsal+Cd.+14,+İçmeler",
+    "whatsapp": "905000000011",
+    "photos": [
+      {
+        "color": "linear-gradient(135deg, #4A7A8C, #17384A)",
+        "caption": "Terrace seating"
+      },
+      {
+        "color": "linear-gradient(135deg, #B8502F, #6B3A22)",
+        "caption": "Fish & chips"
+      }
+    ],
     "menu": [
       {
         "category": "Florida Special Offer (Bottles + 2 Glasses)",
@@ -116,15 +125,9 @@
     ],
     "_meta": {
       "cuisine_inferred": true,
-      "missing_fields": [
-        "waterfront",
-        "score",
-        "reviews",
-        "address",
-        "mapUrl",
-        "whatsapp",
-        "photos"
-      ]
+      "missing_fields": [],
+      "mock_metadata": true,
+      "note": "score/reviews/address/mapUrl/whatsapp/photos are MOCK placeholders for visual QA only — not real data"
     }
   },
   {
@@ -132,14 +135,23 @@
     "name": "The First (Burgers)",
     "cuisine": "Burgers",
     "tier": 1,
-    "waterfront": null,
-    "score": null,
-    "reviews": null,
+    "waterfront": false,
+    "score": 8.5,
+    "reviews": 512,
     "avgPrice": 272,
-    "address": null,
-    "mapUrl": null,
-    "whatsapp": null,
-    "photos": [],
+    "address": "Çarşı Cd. 22, İçmeler  [MOCK — placeholder address, not verified]",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Çarşı+Cd.+22,+İçmeler",
+    "whatsapp": "905000000012",
+    "photos": [
+      {
+        "color": "linear-gradient(135deg, #7A3B2E, #401D16)",
+        "caption": "Smash burger"
+      },
+      {
+        "color": "linear-gradient(135deg, #8A5A2E, #4A2F17)",
+        "caption": "Counter view"
+      }
+    ],
     "menu": [
       {
         "category": "Soft Drinks",
@@ -311,15 +323,9 @@
     ],
     "_meta": {
       "cuisine_inferred": true,
-      "missing_fields": [
-        "waterfront",
-        "score",
-        "reviews",
-        "address",
-        "mapUrl",
-        "whatsapp",
-        "photos"
-      ]
+      "missing_fields": [],
+      "mock_metadata": true,
+      "note": "score/reviews/address/mapUrl/whatsapp/photos are MOCK placeholders for visual QA only — not real data"
     }
   },
   {
@@ -327,14 +333,23 @@
     "name": "Cafe Anne",
     "cuisine": "Café / International",
     "tier": 2,
-    "waterfront": null,
-    "score": null,
-    "reviews": null,
+    "waterfront": false,
+    "score": 9.0,
+    "reviews": 601,
     "avgPrice": 356,
-    "address": null,
-    "mapUrl": null,
-    "whatsapp": null,
-    "photos": [],
+    "address": "Atatürk Cd. 9, İçmeler  [MOCK — placeholder address, not verified]",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Atatürk+Cd.+9,+İçmeler",
+    "whatsapp": "905000000013",
+    "photos": [
+      {
+        "color": "linear-gradient(135deg, #6B4C2E, #3A2817)",
+        "caption": "English breakfast"
+      },
+      {
+        "color": "linear-gradient(135deg, #B8863C, #6B4C1E)",
+        "caption": "Courtyard seating"
+      }
+    ],
     "menu": [
       {
         "category": "Breakfast",
@@ -520,15 +535,9 @@
     ],
     "_meta": {
       "cuisine_inferred": true,
-      "missing_fields": [
-        "waterfront",
-        "score",
-        "reviews",
-        "address",
-        "mapUrl",
-        "whatsapp",
-        "photos"
-      ]
+      "missing_fields": [],
+      "mock_metadata": true,
+      "note": "score/reviews/address/mapUrl/whatsapp/photos are MOCK placeholders for visual QA only — not real data"
     }
   },
   {
@@ -536,14 +545,23 @@
     "name": "Doner Shop",
     "cuisine": "Turkish / Kebab",
     "tier": 3,
-    "waterfront": null,
-    "score": null,
-    "reviews": null,
+    "waterfront": false,
+    "score": 8.9,
+    "reviews": 274,
     "avgPrice": 574,
-    "address": null,
-    "mapUrl": null,
-    "whatsapp": null,
-    "photos": [],
+    "address": "Bar Sk. 5, İçmeler  [MOCK — placeholder address, not verified]",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Bar+Sk.+5,+İçmeler",
+    "whatsapp": "905000000014",
+    "photos": [
+      {
+        "color": "linear-gradient(135deg, #8A5A2E, #4A2F17)",
+        "caption": "Meat doner"
+      },
+      {
+        "color": "linear-gradient(135deg, #B8502F, #6B3A22)",
+        "caption": "Grill station"
+      }
+    ],
     "menu": [
       {
         "category": "Chicken Doner",
@@ -888,15 +906,9 @@
     ],
     "_meta": {
       "cuisine_inferred": true,
-      "missing_fields": [
-        "waterfront",
-        "score",
-        "reviews",
-        "address",
-        "mapUrl",
-        "whatsapp",
-        "photos"
-      ]
+      "missing_fields": [],
+      "mock_metadata": true,
+      "note": "score/reviews/address/mapUrl/whatsapp/photos are MOCK placeholders for visual QA only — not real data"
     }
   },
   {
@@ -904,14 +916,23 @@
     "name": "Liberty Beach Restaurant",
     "cuisine": "Turkish / Seafood",
     "tier": 3,
-    "waterfront": null,
-    "score": null,
-    "reviews": null,
+    "waterfront": true,
+    "score": 9.3,
+    "reviews": 887,
     "avgPrice": 650,
-    "address": null,
-    "mapUrl": null,
-    "whatsapp": null,
-    "photos": [],
+    "address": "Sahil Yolu 12, İçmeler  [MOCK — placeholder address, not verified]",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sahil+Yolu+12,+İçmeler",
+    "whatsapp": "905000000015",
+    "photos": [
+      {
+        "color": "linear-gradient(135deg, #235A72, #0F2E3B)",
+        "caption": "Beachfront terrace"
+      },
+      {
+        "color": "linear-gradient(135deg, #4A9FBF, #1D5266)",
+        "caption": "Seafood casserole"
+      }
+    ],
     "menu": [
       {
         "category": "Pides",
@@ -1232,15 +1253,9 @@
     ],
     "_meta": {
       "cuisine_inferred": true,
-      "missing_fields": [
-        "waterfront",
-        "score",
-        "reviews",
-        "address",
-        "mapUrl",
-        "whatsapp",
-        "photos"
-      ]
+      "missing_fields": [],
+      "mock_metadata": true,
+      "note": "score/reviews/address/mapUrl/whatsapp/photos are MOCK placeholders for visual QA only — not real data"
     }
   },
   {
@@ -1248,14 +1263,23 @@
     "name": "Istanbul Restaurant Kebab House",
     "cuisine": "Turkish / Kebab",
     "tier": 3,
-    "waterfront": null,
-    "score": null,
-    "reviews": null,
+    "waterfront": false,
+    "score": 9.1,
+    "reviews": 455,
     "avgPrice": 671,
-    "address": null,
-    "mapUrl": null,
-    "whatsapp": null,
-    "photos": [],
+    "address": "İnönü Cd. 33, İçmeler  [MOCK — placeholder address, not verified]",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=İnönü+Cd.+33,+İçmeler",
+    "whatsapp": "905000000016",
+    "photos": [
+      {
+        "color": "linear-gradient(135deg, #7A3B2E, #401D16)",
+        "caption": "Mixed grill"
+      },
+      {
+        "color": "linear-gradient(135deg, #8A5A2E, #4A2F17)",
+        "caption": "Dining room"
+      }
+    ],
     "menu": [
       {
         "category": "Starter",
@@ -1521,15 +1545,9 @@
     ],
     "_meta": {
       "cuisine_inferred": true,
-      "missing_fields": [
-        "waterfront",
-        "score",
-        "reviews",
-        "address",
-        "mapUrl",
-        "whatsapp",
-        "photos"
-      ]
+      "missing_fields": [],
+      "mock_metadata": true,
+      "note": "score/reviews/address/mapUrl/whatsapp/photos are MOCK placeholders for visual QA only — not real data"
     }
   },
   {
@@ -1537,14 +1555,23 @@
     "name": "Tipsi Burger",
     "cuisine": "Burgers",
     "tier": 2,
-    "waterfront": null,
-    "score": null,
-    "reviews": null,
+    "waterfront": false,
+    "score": 8.6,
+    "reviews": 198,
     "avgPrice": 334,
-    "address": null,
-    "mapUrl": null,
-    "whatsapp": null,
-    "photos": [],
+    "address": "Marina Blv. 7, İçmeler  [MOCK — placeholder address, not verified]",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Marina+Blv.+7,+İçmeler",
+    "whatsapp": "905000000017",
+    "photos": [
+      {
+        "color": "linear-gradient(135deg, #7A3B2E, #401D16)",
+        "caption": "Loaded burger"
+      },
+      {
+        "color": "linear-gradient(135deg, #4A2F17, #8A5A2E)",
+        "caption": "Bar seating"
+      }
+    ],
     "menu": [
       {
         "category": "Burgers",
@@ -1911,15 +1938,9 @@
     ],
     "_meta": {
       "cuisine_inferred": true,
-      "missing_fields": [
-        "waterfront",
-        "score",
-        "reviews",
-        "address",
-        "mapUrl",
-        "whatsapp",
-        "photos"
-      ]
+      "missing_fields": [],
+      "mock_metadata": true,
+      "note": "score/reviews/address/mapUrl/whatsapp/photos are MOCK placeholders for visual QA only — not real data"
     }
   }
 ]
