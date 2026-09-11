@@ -1,1 +1,1925 @@
-
+[
+  {
+    "id": "florida-restaurant",
+    "name": "Florida Restaurant",
+    "cuisine": "British / International",
+    "tier": 1,
+    "waterfront": null,
+    "score": null,
+    "reviews": null,
+    "avgPrice": 229,
+    "address": null,
+    "mapUrl": null,
+    "whatsapp": null,
+    "photos": [],
+    "menu": [
+      {
+        "category": "Florida Special Offer (Bottles + 2 Glasses)",
+        "items": [
+          {
+            "name": "2 Wine",
+            "price": 450
+          },
+          {
+            "name": "2 Vodka",
+            "price": 500
+          },
+          {
+            "name": "2 Raki/Brandy",
+            "price": 400
+          },
+          {
+            "name": "2 Bacardi",
+            "price": 550
+          },
+          {
+            "name": "2 Malibu",
+            "price": 600
+          },
+          {
+            "name": "2 Smirnoff",
+            "price": 650
+          },
+          {
+            "name": "2 Archer's",
+            "price": 450
+          }
+        ]
+      },
+      {
+        "category": "Frozen Cocktails (2x)",
+        "items": [
+          {
+            "name": "2 Capirinha",
+            "price": 300
+          },
+          {
+            "name": "2 Daiquiri",
+            "price": 300
+          },
+          {
+            "name": "2 Any Cocktail",
+            "price": 300
+          }
+        ]
+      },
+      {
+        "category": "Lunch / Specials",
+        "items": [
+          {
+            "name": "Home Made Burger",
+            "price": 827.54
+          },
+          {
+            "name": "Jacket Potato",
+            "price": 531.99
+          },
+          {
+            "name": "Fish & Chips",
+            "price": 827.54
+          },
+          {
+            "name": "Doner Kebab",
+            "price": 531.99
+          }
+        ]
+      },
+      {
+        "category": "Pie Menu",
+        "items": [
+          {
+            "name": "Steak & Onion Pie",
+            "price": 295.55
+          },
+          {
+            "name": "Steak & Kidney Pie",
+            "price": 295.55
+          },
+          {
+            "name": "Mince & Onion Pie",
+            "price": 295.55
+          },
+          {
+            "name": "Meat & Potato Pie",
+            "price": 295.55
+          },
+          {
+            "name": "Chicken Pie",
+            "price": 295.55
+          },
+          {
+            "name": "Cheese & Onion Pie",
+            "price": 295.55
+          }
+        ]
+      }
+    ],
+    "_meta": {
+      "cuisine_inferred": true,
+      "missing_fields": [
+        "waterfront",
+        "score",
+        "reviews",
+        "address",
+        "mapUrl",
+        "whatsapp",
+        "photos"
+      ]
+    }
+  },
+  {
+    "id": "the-first-burgers",
+    "name": "The First (Burgers)",
+    "cuisine": "Burgers",
+    "tier": 1,
+    "waterfront": null,
+    "score": null,
+    "reviews": null,
+    "avgPrice": 272,
+    "address": null,
+    "mapUrl": null,
+    "whatsapp": null,
+    "photos": [],
+    "menu": [
+      {
+        "category": "Soft Drinks",
+        "items": [
+          {
+            "name": "Water / Su",
+            "price": 30
+          },
+          {
+            "name": "Coke-Zero-Fanta-Sprite",
+            "price": 95
+          },
+          {
+            "name": "Large Coke-Zero-Fanta-Sprite",
+            "price": 135
+          },
+          {
+            "name": "Cherry / Peach Juice",
+            "price": 95
+          },
+          {
+            "name": "Lipton Ice Tea (All flavors)",
+            "price": 95
+          },
+          {
+            "name": "Mineral Water / Soda",
+            "price": 35
+          },
+          {
+            "name": "Tonic / Tonik",
+            "price": 105
+          }
+        ]
+      },
+      {
+        "category": "Beers",
+        "items": [
+          {
+            "name": "Efes / Tuborg 50 cl",
+            "price": 180
+          },
+          {
+            "name": "Carlsberg",
+            "price": 190
+          },
+          {
+            "name": "Bomonti / Budweiser",
+            "price": 210
+          },
+          {
+            "name": "Heineken",
+            "price": 220
+          },
+          {
+            "name": "Gluten Free Beer",
+            "price": 230
+          },
+          {
+            "name": "Corona / Miller",
+            "price": 250
+          }
+        ]
+      },
+      {
+        "category": "Wines",
+        "items": [
+          {
+            "name": "Glass of Wine (Red/White/Roze)",
+            "price": 260
+          }
+        ]
+      },
+      {
+        "category": "Import Spirits",
+        "items": [
+          {
+            "name": "Gordon Gin / Bacardi / Smirnoff",
+            "price": 260
+          }
+        ]
+      },
+      {
+        "category": "Milkshake",
+        "items": [
+          {
+            "name": "Oreo",
+            "price": 190
+          },
+          {
+            "name": "Strawberry / Chocolate",
+            "price": 170
+          }
+        ]
+      },
+      {
+        "category": "Appetizers",
+        "items": [
+          {
+            "name": "Onion Rings / Nuggets / Fries",
+            "price": 150
+          },
+          {
+            "name": "Corn Fried Ribs",
+            "price": 160
+          },
+          {
+            "name": "Jalapeno Peppers",
+            "price": 190
+          },
+          {
+            "name": "Mozzarella Sticks",
+            "price": 220
+          },
+          {
+            "name": "Chicken Strips",
+            "price": 250
+          },
+          {
+            "name": "Hot Honey Chicken / Wings",
+            "price": 260
+          },
+          {
+            "name": "Crispy Share Platter",
+            "price": 420
+          }
+        ]
+      },
+      {
+        "category": "Burgers",
+        "items": [
+          {
+            "name": "Chicken Burger / Tavuk Burger",
+            "price": 340
+          },
+          {
+            "name": "Veggie Burger",
+            "price": 350
+          },
+          {
+            "name": "Chicken Royal / Parmo / Hot Honey",
+            "price": 380
+          },
+          {
+            "name": "Classic Burger",
+            "price": 440
+          },
+          {
+            "name": "Cheese Burger",
+            "price": 470
+          },
+          {
+            "name": "First Bite Burger",
+            "price": 530
+          },
+          {
+            "name": "Medalion Beef / Roast Beef",
+            "price": 620
+          },
+          {
+            "name": "Fat Burger",
+            "price": 660
+          },
+          {
+            "name": "Tombite Burger",
+            "price": 770
+          }
+        ]
+      }
+    ],
+    "_meta": {
+      "cuisine_inferred": true,
+      "missing_fields": [
+        "waterfront",
+        "score",
+        "reviews",
+        "address",
+        "mapUrl",
+        "whatsapp",
+        "photos"
+      ]
+    }
+  },
+  {
+    "id": "cafe-anne",
+    "name": "Cafe Anne",
+    "cuisine": "Café / International",
+    "tier": 2,
+    "waterfront": null,
+    "score": null,
+    "reviews": null,
+    "avgPrice": 356,
+    "address": null,
+    "mapUrl": null,
+    "whatsapp": null,
+    "photos": [],
+    "menu": [
+      {
+        "category": "Breakfast",
+        "items": [
+          {
+            "name": "Turkish Breakfast",
+            "price": 430
+          },
+          {
+            "name": "Full English Breakfast",
+            "price": 450
+          },
+          {
+            "name": "Garlic Bread",
+            "price": 160
+          }
+        ]
+      },
+      {
+        "category": "Omelettes",
+        "items": [
+          {
+            "name": "Plain Omelette",
+            "price": 230
+          },
+          {
+            "name": "Mixed Omelette",
+            "price": 360
+          }
+        ]
+      },
+      {
+        "category": "Toasts",
+        "items": [
+          {
+            "name": "Egg / Bacon / Sausage on Toast",
+            "price": 265
+          }
+        ]
+      },
+      {
+        "category": "Burgers",
+        "items": [
+          {
+            "name": "Classic Burger / Chicken Burger",
+            "price": 410
+          },
+          {
+            "name": "Cheese Burger",
+            "price": 440
+          },
+          {
+            "name": "Double Cheeseburger",
+            "price": 690
+          },
+          {
+            "name": "Anne Special Burger",
+            "price": 700
+          }
+        ]
+      },
+      {
+        "category": "Main Dishes",
+        "items": [
+          {
+            "name": "Soups (Tomato/Mushroom/Chicken)",
+            "price": 210
+          },
+          {
+            "name": "Pasta (Average)",
+            "price": 400
+          },
+          {
+            "name": "Chicken Curry / Schnitzel",
+            "price": 480
+          },
+          {
+            "name": "Wraps (Average)",
+            "price": 430
+          }
+        ]
+      },
+      {
+        "category": "Drinks",
+        "items": [
+          {
+            "name": "Soft Drinks (Coke/Fanta/Sprite)",
+            "price": 110
+          },
+          {
+            "name": "Fresh Orange Juice",
+            "price": 190
+          },
+          {
+            "name": "Iced Tea",
+            "price": 115
+          }
+        ]
+      },
+      {
+        "category": "Coffee",
+        "items": [
+          {
+            "name": "Hot Americano / Latte / Capuccino",
+            "price": 220
+          },
+          {
+            "name": "Iced Latte / Frappe",
+            "price": 230
+          }
+        ]
+      },
+      {
+        "category": "Beers",
+        "items": [
+          {
+            "name": "Efes / Tuborg (Large)",
+            "price": 180
+          },
+          {
+            "name": "Corona / Miller",
+            "price": 250
+          }
+        ]
+      },
+      {
+        "category": "Cocktails",
+        "items": [
+          {
+            "name": "Mojito / Sex on the Beach / Tequila Sunrise",
+            "price": 385
+          },
+          {
+            "name": "Long Island Ice Tea",
+            "price": 490
+          },
+          {
+            "name": "Jug of Sangria",
+            "price": 1000
+          }
+        ]
+      },
+      {
+        "category": "Wines",
+        "items": [
+          {
+            "name": "Glass of Wine (Average)",
+            "price": 245
+          }
+        ]
+      },
+      {
+        "category": "Spirits",
+        "items": [
+          {
+            "name": "Local Gin / Vodka / Raki",
+            "price": 210
+          }
+        ]
+      },
+      {
+        "category": "Whiskey",
+        "items": [
+          {
+            "name": "Chivas Regal / Jack Daniels",
+            "price": 400
+          }
+        ]
+      },
+      {
+        "category": "Desserts",
+        "items": [
+          {
+            "name": "Homemade Crepes / Waffles",
+            "price": 330
+          },
+          {
+            "name": "Homemade Cakes",
+            "price": 310
+          }
+        ]
+      }
+    ],
+    "_meta": {
+      "cuisine_inferred": true,
+      "missing_fields": [
+        "waterfront",
+        "score",
+        "reviews",
+        "address",
+        "mapUrl",
+        "whatsapp",
+        "photos"
+      ]
+    }
+  },
+  {
+    "id": "doner-shop",
+    "name": "Doner Shop",
+    "cuisine": "Turkish / Kebab",
+    "tier": 3,
+    "waterfront": null,
+    "score": null,
+    "reviews": null,
+    "avgPrice": 574,
+    "address": null,
+    "mapUrl": null,
+    "whatsapp": null,
+    "photos": [],
+    "menu": [
+      {
+        "category": "Chicken Doner",
+        "items": [
+          {
+            "name": "Chicken Doner Wrap (M)",
+            "price": 300
+          },
+          {
+            "name": "Chicken Doner Wrap (L)",
+            "price": 350
+          },
+          {
+            "name": "Chicken Doner Wrap (XL)",
+            "price": 400
+          },
+          {
+            "name": "Chicken Doner Wrap with Cheese (M)",
+            "price": 370
+          },
+          {
+            "name": "Chicken Doner Wrap with Cheese (L)",
+            "price": 420
+          },
+          {
+            "name": "Chicken Doner Wrap with Cheese (XL)",
+            "price": 470
+          },
+          {
+            "name": "Chicken Doner Service (Plate) (M)",
+            "price": 500
+          },
+          {
+            "name": "Chicken Doner Service (Plate) (L)",
+            "price": 550
+          },
+          {
+            "name": "Chicken Doner Service (Plate) (XL)",
+            "price": 600
+          },
+          {
+            "name": "Chicken Doner with Rice (M)",
+            "price": 500
+          },
+          {
+            "name": "Chicken Doner with Rice (L)",
+            "price": 550
+          },
+          {
+            "name": "Chicken Doner with Rice (XL)",
+            "price": 600
+          }
+        ]
+      },
+      {
+        "category": "Meat Doner",
+        "items": [
+          {
+            "name": "Meat Doner Wrap (L)",
+            "price": 450
+          },
+          {
+            "name": "Meat Doner Wrap (XL)",
+            "price": 500
+          },
+          {
+            "name": "Meat Doner Wrap with Cheese (L)",
+            "price": 520
+          },
+          {
+            "name": "Meat Doner Wrap with Cheese (XL)",
+            "price": 570
+          },
+          {
+            "name": "Meat Doner Service (Plate) (M)",
+            "price": 600
+          },
+          {
+            "name": "Meat Doner Service (Plate) (L)",
+            "price": 650
+          },
+          {
+            "name": "Meat Doner Service (Plate) (XL)",
+            "price": 700
+          },
+          {
+            "name": "Meat Doner with Rice (M)",
+            "price": 600
+          },
+          {
+            "name": "Meat Doner with Rice (L)",
+            "price": 650
+          },
+          {
+            "name": "Meat Doner with Rice (XL)",
+            "price": 700
+          }
+        ]
+      },
+      {
+        "category": "Iskender",
+        "items": [
+          {
+            "name": "Meat Iskender Kebab (M)",
+            "price": 650
+          },
+          {
+            "name": "Meat Iskender Kebab (L)",
+            "price": 700
+          },
+          {
+            "name": "Meat Iskender Kebab (XL)",
+            "price": 750
+          },
+          {
+            "name": "Chicken Iskender Kebab (M)",
+            "price": 550
+          },
+          {
+            "name": "Chicken Iskender Kebab (L)",
+            "price": 600
+          },
+          {
+            "name": "Chicken Iskender Kebab (XL)",
+            "price": 650
+          }
+        ]
+      },
+      {
+        "category": "Hearty Selections",
+        "items": [
+          {
+            "name": "1. Chicken Doner Wrap Menu (M)",
+            "price": 500
+          },
+          {
+            "name": "1. Chicken Doner Wrap Menu (L)",
+            "price": 550
+          },
+          {
+            "name": "1. Chicken Doner Wrap Menu (XL)",
+            "price": 600
+          },
+          {
+            "name": "2. Chicken Wrap with Cheese Menu (M)",
+            "price": 570
+          },
+          {
+            "name": "2. Chicken Wrap with Cheese Menu (L)",
+            "price": 620
+          },
+          {
+            "name": "2. Chicken Wrap with Cheese Menu (XL)",
+            "price": 670
+          },
+          {
+            "name": "3. Chicken Doner Service Menu (M)",
+            "price": 700
+          },
+          {
+            "name": "3. Chicken Doner Service Menu (L)",
+            "price": 750
+          },
+          {
+            "name": "3. Chicken Doner Service Menu (XL)",
+            "price": 800
+          },
+          {
+            "name": "4. Chicken Doner with Rice Menu (M)",
+            "price": 700
+          },
+          {
+            "name": "4. Chicken Doner with Rice Menu (L)",
+            "price": 750
+          },
+          {
+            "name": "4. Chicken Doner with Rice Menu (XL)",
+            "price": 800
+          },
+          {
+            "name": "5. Meat Doner Wrap Menu (M)",
+            "price": 600
+          },
+          {
+            "name": "5. Meat Doner Wrap Menu (L)",
+            "price": 650
+          },
+          {
+            "name": "5. Meat Doner Wrap Menu (XL)",
+            "price": 700
+          },
+          {
+            "name": "6. Meat Wrap with Cheese Menu (M)",
+            "price": 670
+          },
+          {
+            "name": "6. Meat Wrap with Cheese Menu (L)",
+            "price": 720
+          },
+          {
+            "name": "6. Meat Wrap with Cheese Menu (XL)",
+            "price": 770
+          },
+          {
+            "name": "7. Meat Doner Service Menu (M)",
+            "price": 800
+          },
+          {
+            "name": "7. Meat Doner Service Menu (L)",
+            "price": 850
+          },
+          {
+            "name": "7. Meat Doner Service Menu (XL)",
+            "price": 900
+          },
+          {
+            "name": "8. Meat Doner with Rice Menu (M)",
+            "price": 800
+          },
+          {
+            "name": "8. Meat Doner with Rice Menu (L)",
+            "price": 850
+          },
+          {
+            "name": "8. Meat Doner with Rice Menu (XL)",
+            "price": 900
+          }
+        ]
+      },
+      {
+        "category": "Pizzas",
+        "items": [
+          {
+            "name": "Pizza Margherita (24cm)",
+            "price": 350
+          },
+          {
+            "name": "Sausage Pizza (24cm)",
+            "price": 390
+          },
+          {
+            "name": "Mixed Pizza (24cm)",
+            "price": 450
+          }
+        ]
+      },
+      {
+        "category": "Burgers",
+        "items": [
+          {
+            "name": "Hamburger (Single)",
+            "price": 500
+          },
+          {
+            "name": "Hamburger (Double)",
+            "price": 650
+          },
+          {
+            "name": "Cheese Burger (Single)",
+            "price": 570
+          },
+          {
+            "name": "Cheese Burger (Double)",
+            "price": 720
+          }
+        ]
+      },
+      {
+        "category": "Sandwiches",
+        "items": [
+          {
+            "name": "Vegetarian Wrap (M)",
+            "price": 250
+          },
+          {
+            "name": "Vegetarian Wrap (L)",
+            "price": 300
+          },
+          {
+            "name": "Vegetarian Wrap (XL)",
+            "price": 350
+          },
+          {
+            "name": "Meat Doner Sandwich (M)",
+            "price": 400
+          },
+          {
+            "name": "Meat Doner Sandwich (L)",
+            "price": 450
+          },
+          {
+            "name": "Meat Doner Sandwich (XL)",
+            "price": 500
+          },
+          {
+            "name": "Chicken Doner Sandwich (M)",
+            "price": 300
+          },
+          {
+            "name": "Chicken Doner Sandwich (L)",
+            "price": 350
+          },
+          {
+            "name": "Chicken Doner Sandwich (XL)",
+            "price": 400
+          },
+          {
+            "name": "Meatball Sandwich (M)",
+            "price": 400
+          },
+          {
+            "name": "Meatball Sandwich (L)",
+            "price": 470
+          },
+          {
+            "name": "Meatball Sandwich (XL)",
+            "price": 540
+          }
+        ]
+      },
+      {
+        "category": "Mixed Wraps",
+        "items": [
+          {
+            "name": "Mixed Doner Wrap (M)",
+            "price": 450
+          },
+          {
+            "name": "Mixed Doner Wrap (L)",
+            "price": 500
+          },
+          {
+            "name": "Mixed Doner Wrap with Cheese (M)",
+            "price": 520
+          },
+          {
+            "name": "Mixed Doner Wrap with Cheese (L)",
+            "price": 570
+          }
+        ]
+      }
+    ],
+    "_meta": {
+      "cuisine_inferred": true,
+      "missing_fields": [
+        "waterfront",
+        "score",
+        "reviews",
+        "address",
+        "mapUrl",
+        "whatsapp",
+        "photos"
+      ]
+    }
+  },
+  {
+    "id": "liberty-beach-restaurant",
+    "name": "Liberty Beach Restaurant",
+    "cuisine": "Turkish / Seafood",
+    "tier": 3,
+    "waterfront": null,
+    "score": null,
+    "reviews": null,
+    "avgPrice": 650,
+    "address": null,
+    "mapUrl": null,
+    "whatsapp": null,
+    "photos": [],
+    "menu": [
+      {
+        "category": "Pides",
+        "items": [
+          {
+            "name": "PEYNIRLI BAFRA PIDE",
+            "price": 510
+          },
+          {
+            "name": "KIYMALI BAFRA PIDE",
+            "price": 560
+          },
+          {
+            "name": "TRABZON KUSBASILI KASARLI",
+            "price": 780
+          },
+          {
+            "name": "TRABZON KUSBASILI",
+            "price": 750
+          },
+          {
+            "name": "TRABZON KIYMALI PEYNIRLI",
+            "price": 560
+          },
+          {
+            "name": "TRABZON KIYMALI YUMURTALI",
+            "price": 560
+          },
+          {
+            "name": "TRABZON KAVURMALI PEYNIRLI",
+            "price": 800
+          },
+          {
+            "name": "TRABZON PEYNIRLI PIDE",
+            "price": 510
+          },
+          {
+            "name": "TRABZON KAPALI KAVURMALI",
+            "price": 800
+          },
+          {
+            "name": "TRABZON KAPALI KIYMALI",
+            "price": 560
+          },
+          {
+            "name": "GORELE KIYMALI",
+            "price": 560
+          },
+          {
+            "name": "GORELE KIYMALI PEYNIRLI",
+            "price": 560
+          },
+          {
+            "name": "GORELE KAVURMALI PEYNIRLI",
+            "price": 780
+          },
+          {
+            "name": "GORELE KAVURMALI",
+            "price": 800
+          },
+          {
+            "name": "GORELE PEYNIRLI",
+            "price": 510
+          },
+          {
+            "name": "GORELE PASTIRMALI",
+            "price": 850
+          }
+        ]
+      },
+      {
+        "category": "Starters",
+        "items": [
+          {
+            "name": "MERCIMEK CORBA / LENTIL SOUP",
+            "price": 275
+          },
+          {
+            "name": "DOMATES CORBA / TOMATO SOUP",
+            "price": 260
+          },
+          {
+            "name": "DENIZ URUNLERI GUVEC / SEAFOOD CASSEROLE",
+            "price": 1320
+          },
+          {
+            "name": "KARIDES GUVEC / SHRIMPS CASSEROLE",
+            "price": 1100
+          },
+          {
+            "name": "JUMBO KARIDES IZGARA / JUMBO SHRIMPS GRILL",
+            "price": 1350
+          },
+          {
+            "name": "KALAMAR TAVA / FRIED CALAMARY",
+            "price": 1050
+          },
+          {
+            "name": "AHTAPOT IZGARA / OCTOPUS GRILL-200GR",
+            "price": 1050
+          },
+          {
+            "name": "KIYMALI AVCI BOREGI / MINCE MEAT PASTRY",
+            "price": 750
+          },
+          {
+            "name": "KASARLI MANTAR DOLMA / STUFFED MUSHROOM CHEESE",
+            "price": 510
+          },
+          {
+            "name": "SARIMSAKLI PEYNIRLI EKMEK / GARLIC CHEESE BREAD",
+            "price": 350
+          },
+          {
+            "name": "SARIMSAKLI EKMEK / GARLIC BREAD",
+            "price": 300
+          },
+          {
+            "name": "RAKI PEYNIR TABAGI / RAKI PLATE",
+            "price": 580
+          },
+          {
+            "name": "PEYNIR TABAGI / CHEESE PLATE",
+            "price": 850
+          },
+          {
+            "name": "GUNLUK MEZE CESITLERI / DAILY FRESH MEZES",
+            "price": 280
+          }
+        ]
+      },
+      {
+        "category": "Breakfast",
+        "items": [
+          {
+            "name": "FULL ENGLISH BREAKFAST",
+            "price": 725
+          },
+          {
+            "name": "SERPME KAHVALTI / VILLAGE STYLE TURKISH BREAKFAST",
+            "price": 1600
+          },
+          {
+            "name": "SCAMBI EGGS ON TOAST WITH BACON AND SAUSAGE",
+            "price": 525
+          },
+          {
+            "name": "SCAMBLED EGGS ON TOAST",
+            "price": 390
+          },
+          {
+            "name": "EGG ON CHIPS AND BEANS",
+            "price": 440
+          },
+          {
+            "name": "CHEESE BACON ON TOAST",
+            "price": 490
+          },
+          {
+            "name": "SAUSAGE EGG AND CHIPS",
+            "price": 440
+          },
+          {
+            "name": "JAM BUTTER TOAST",
+            "price": 360
+          },
+          {
+            "name": "BEANS ON TOAST",
+            "price": 360
+          },
+          {
+            "name": "CHEESE ON TOAST",
+            "price": 360
+          },
+          {
+            "name": "EGG ON CHIPS",
+            "price": 360
+          }
+        ]
+      },
+      {
+        "category": "Omelettes",
+        "items": [
+          {
+            "name": "SADE - PLAIN",
+            "price": 340
+          },
+          {
+            "name": "JAMBON & PEYNIR-HAM & CHEESE",
+            "price": 350
+          },
+          {
+            "name": "KASAR PEYNIRLI - CHEESE",
+            "price": 400
+          },
+          {
+            "name": "ISPANAKLI PEYNIRLI - SPINACH CHEESE",
+            "price": 400
+          },
+          {
+            "name": "BACON & BACON & ONION",
+            "price": 600
+          },
+          {
+            "name": "MANTARLI - MUSHROOM",
+            "price": 420
+          },
+          {
+            "name": "KARISIK - MIXED",
+            "price": 470
+          }
+        ]
+      },
+      {
+        "category": "Burgers",
+        "items": [
+          {
+            "name": "HAMBURGER",
+            "price": 580
+          },
+          {
+            "name": "CHEDDAR BURGER",
+            "price": 610
+          },
+          {
+            "name": "LOKUM BURGER",
+            "price": 650
+          },
+          {
+            "name": "HAWAII BURGER",
+            "price": 660
+          },
+          {
+            "name": "CRISPY CHICKEN BURGER",
+            "price": 550
+          }
+        ]
+      },
+      {
+        "category": "Sandwiches",
+        "items": [
+          {
+            "name": "HOT STEAK SANDVICH",
+            "price": 740
+          },
+          {
+            "name": "HOT CHICKEN SANDVICH",
+            "price": 720
+          },
+          {
+            "name": "HOT MEATBALL SANDVICH",
+            "price": 700
+          },
+          {
+            "name": "HAM CHEESE SANDVICH",
+            "price": 750
+          },
+          {
+            "name": "TUNA FISH SANDVICH",
+            "price": 850
+          },
+          {
+            "name": "CITIR TAVUK / LIBERTY SANDVICH",
+            "price": 750
+          }
+        ]
+      },
+      {
+        "category": "Toast",
+        "items": [
+          {
+            "name": "KASARLI SUCUKLU & CHIPS",
+            "price": 400
+          },
+          {
+            "name": "KAVURMALI KASARLI & CHIPS",
+            "price": 575
+          },
+          {
+            "name": "KASARLI & CHIPS",
+            "price": 360
+          }
+        ]
+      },
+      {
+        "category": "Chicken",
+        "items": [
+          {
+            "name": "TAVUK BIFTEK IZGARA / CHICKEN GRILL",
+            "price": 800
+          },
+          {
+            "name": "VIYANA TAVUK SINITZEL / VIYANA CHICKEN SCHNITZEL",
+            "price": 815
+          },
+          {
+            "name": "MANTAR SOSLU TAVUK BIFTEK / CHICKEN MUSHROOM STEAK",
+            "price": 940
+          },
+          {
+            "name": "ROKFOR SOSLU TAVUK BIFTEK / CHICKEN ROQUEFORT STEAK",
+            "price": 940
+          },
+          {
+            "name": "KORI SOSLU TAVUK BIFTEK / CHICKEN CURRY",
+            "price": 940
+          },
+          {
+            "name": "TATLI EKSI SOSLU TAVUK / SWEET & SOUR CHICKEN",
+            "price": 940
+          },
+          {
+            "name": "TAVUK FAJITA / CHICKEN FAJITA",
+            "price": 1060
+          }
+        ]
+      }
+    ],
+    "_meta": {
+      "cuisine_inferred": true,
+      "missing_fields": [
+        "waterfront",
+        "score",
+        "reviews",
+        "address",
+        "mapUrl",
+        "whatsapp",
+        "photos"
+      ]
+    }
+  },
+  {
+    "id": "istanbul-restaurant-kebab-house",
+    "name": "Istanbul Restaurant Kebab House",
+    "cuisine": "Turkish / Kebab",
+    "tier": 3,
+    "waterfront": null,
+    "score": null,
+    "reviews": null,
+    "avgPrice": 671,
+    "address": null,
+    "mapUrl": null,
+    "whatsapp": null,
+    "photos": [],
+    "menu": [
+      {
+        "category": "Starter",
+        "items": [
+          {
+            "name": "Tomoto soup",
+            "price": 225
+          },
+          {
+            "name": "Chicken soup",
+            "price": 359
+          },
+          {
+            "name": "Lentil Soup",
+            "price": 180
+          },
+          {
+            "name": "Turkish Cheese roll",
+            "price": 295
+          },
+          {
+            "name": "Garlic mush rooms",
+            "price": 320
+          },
+          {
+            "name": "King prawns",
+            "price": 500
+          },
+          {
+            "name": "Meze plate",
+            "price": 320
+          }
+        ]
+      },
+      {
+        "category": "Turkish Pide",
+        "items": [
+          {
+            "name": "Mince meat pide",
+            "price": 480
+          },
+          {
+            "name": "Lamb pide",
+            "price": 490
+          },
+          {
+            "name": "Chicken pide",
+            "price": 550
+          },
+          {
+            "name": "Mixed pide",
+            "price": 550
+          },
+          {
+            "name": "Cheese pide",
+            "price": 435
+          }
+        ]
+      },
+      {
+        "category": "Pizza",
+        "items": [
+          {
+            "name": "Margarita",
+            "price": 450
+          },
+          {
+            "name": "Mushroom",
+            "price": 465
+          },
+          {
+            "name": "Pepperoni",
+            "price": 550
+          },
+          {
+            "name": "Hawaii",
+            "price": 550
+          },
+          {
+            "name": "Vegetarian",
+            "price": 490
+          },
+          {
+            "name": "Salami",
+            "price": 520
+          },
+          {
+            "name": "Mixed pizza",
+            "price": 550
+          },
+          {
+            "name": "Tuna fish pizza",
+            "price": 710
+          },
+          {
+            "name": "Sea food pizza",
+            "price": 750
+          }
+        ]
+      },
+      {
+        "category": "Spaghetti",
+        "items": [
+          {
+            "name": "Spaghetti Bolognese",
+            "price": 499
+          },
+          {
+            "name": "Spaghetti napolitan",
+            "price": 395
+          },
+          {
+            "name": "Baked lazagne",
+            "price": 680
+          },
+          {
+            "name": "Spaghetti Calbonera",
+            "price": 540
+          }
+        ]
+      },
+      {
+        "category": "Chicken Dishes",
+        "items": [
+          {
+            "name": "Chicken fillet",
+            "price": 520
+          },
+          {
+            "name": "Chicken mushroom",
+            "price": 420
+          },
+          {
+            "name": "Pepper chicken",
+            "price": 620
+          },
+          {
+            "name": "Chicken chops",
+            "price": 550
+          },
+          {
+            "name": "Chicken casserole",
+            "price": 689
+          },
+          {
+            "name": "Ottoman chicken",
+            "price": 730
+          }
+        ]
+      },
+      {
+        "category": "Casserole",
+        "items": [
+          {
+            "name": "Lamb casserole",
+            "price": 900
+          },
+          {
+            "name": "Chicken casserole",
+            "price": 660
+          },
+          {
+            "name": "Sea food casserole",
+            "price": 950
+          },
+          {
+            "name": "Vegetarian casserole",
+            "price": 490
+          }
+        ]
+      },
+      {
+        "category": "Sea Food",
+        "items": [
+          {
+            "name": "Sea bass",
+            "price": 900
+          },
+          {
+            "name": "Sea Bream",
+            "price": 900
+          },
+          {
+            "name": "Tiger king prawns",
+            "price": 1100
+          },
+          {
+            "name": "Mussel al marinere",
+            "price": 900
+          }
+        ]
+      },
+      {
+        "category": "Steak",
+        "items": [
+          {
+            "name": "Fillet steak",
+            "price": 1250
+          },
+          {
+            "name": "Pepper steak",
+            "price": 1250
+          },
+          {
+            "name": "Mushroom steak",
+            "price": 1250
+          },
+          {
+            "name": "T.bone steak 500 gr",
+            "price": 1500
+          }
+        ]
+      },
+      {
+        "category": "Kebab",
+        "items": [
+          {
+            "name": "Lamb döner kebab",
+            "price": 650
+          },
+          {
+            "name": "Lamb shish kebab",
+            "price": 900
+          },
+          {
+            "name": "Iskender kebab",
+            "price": 750
+          },
+          {
+            "name": "Chicken shish kebab",
+            "price": 750
+          },
+          {
+            "name": "Adana kebab spicy",
+            "price": 720
+          },
+          {
+            "name": "Urfa kebab",
+            "price": 700
+          },
+          {
+            "name": "Lamb chops",
+            "price": 990
+          },
+          {
+            "name": "Special mixed grill",
+            "price": 1200
+          },
+          {
+            "name": "Grill meatballs",
+            "price": 750
+          },
+          {
+            "name": "Grill chicken wings",
+            "price": 550
+          },
+          {
+            "name": "Lamb shank",
+            "price": 860
+          }
+        ]
+      }
+    ],
+    "_meta": {
+      "cuisine_inferred": true,
+      "missing_fields": [
+        "waterfront",
+        "score",
+        "reviews",
+        "address",
+        "mapUrl",
+        "whatsapp",
+        "photos"
+      ]
+    }
+  },
+  {
+    "id": "tipsi-burger",
+    "name": "Tipsi Burger",
+    "cuisine": "Burgers",
+    "tier": 2,
+    "waterfront": null,
+    "score": null,
+    "reviews": null,
+    "avgPrice": 334,
+    "address": null,
+    "mapUrl": null,
+    "whatsapp": null,
+    "photos": [],
+    "menu": [
+      {
+        "category": "Burgers",
+        "items": [
+          {
+            "name": "Tipsi Burger",
+            "price": 690
+          },
+          {
+            "name": "Tipsi Bacon Burger",
+            "price": 850
+          },
+          {
+            "name": "Spicy Tipsi Burger",
+            "price": 710
+          },
+          {
+            "name": "Tipsi Mushroom",
+            "price": 730
+          },
+          {
+            "name": "Tipsi TR",
+            "price": 820
+          },
+          {
+            "name": "Tipsi Chicken",
+            "price": 570
+          },
+          {
+            "name": "Double Trouble Tipsi",
+            "price": 840
+          },
+          {
+            "name": "Double Trouble Bacon",
+            "price": 980
+          },
+          {
+            "name": "Tipsi XXXL (~8 portions)",
+            "price": 2950
+          }
+        ]
+      },
+      {
+        "category": "Kids Menu",
+        "items": [
+          {
+            "name": "Kids Burger",
+            "price": 450
+          },
+          {
+            "name": "Kids Cheeseburger",
+            "price": 470
+          },
+          {
+            "name": "Kids Chicken Burger",
+            "price": 370
+          },
+          {
+            "name": "Kids Chicken Cheeseburger",
+            "price": 330
+          },
+          {
+            "name": "Chicken Nuggets & Fries (4 pcs)",
+            "price": 350
+          },
+          {
+            "name": "Chicken Tenders & Fries (2 pcs)",
+            "price": 350
+          },
+          {
+            "name": "Mozzarella Sticks & Fries (2 pcs)",
+            "price": 350
+          },
+          {
+            "name": "Pork Sausage & Fries (2 pcs)",
+            "price": 390
+          }
+        ]
+      },
+      {
+        "category": "Sides",
+        "items": [
+          {
+            "name": "Crispy Chicken Wings (4 pcs)",
+            "price": 350
+          },
+          {
+            "name": "Crispy Chicken Tenders (4 pcs)",
+            "price": 350
+          },
+          {
+            "name": "Deep Fried Pork Sausage (2 pcs)",
+            "price": 400
+          },
+          {
+            "name": "Onion Rings (6 pcs)",
+            "price": 200
+          },
+          {
+            "name": "Mozzarella Sticks (6 pcs)",
+            "price": 300
+          },
+          {
+            "name": "French Fries Small",
+            "price": 200
+          },
+          {
+            "name": "French Fries Large",
+            "price": 300
+          }
+        ]
+      },
+      {
+        "category": "Soft Drinks",
+        "items": [
+          {
+            "name": "Coca Cola",
+            "price": 140
+          },
+          {
+            "name": "Zero",
+            "price": 140
+          },
+          {
+            "name": "Fanta",
+            "price": 140
+          },
+          {
+            "name": "Sprite",
+            "price": 140
+          },
+          {
+            "name": "Redbull",
+            "price": 200
+          },
+          {
+            "name": "Powerade",
+            "price": 200
+          },
+          {
+            "name": "Ice Tea",
+            "price": 140
+          },
+          {
+            "name": "Fruit Juice",
+            "price": 120
+          },
+          {
+            "name": "Mineral Water",
+            "price": 70
+          },
+          {
+            "name": "Water",
+            "price": 60
+          },
+          {
+            "name": "Ayran",
+            "price": 70
+          },
+          {
+            "name": "Tea",
+            "price": 100
+          },
+          {
+            "name": "Turkish Coffee",
+            "price": 100
+          },
+          {
+            "name": "Espresso",
+            "price": 100
+          },
+          {
+            "name": "Americano",
+            "price": 100
+          },
+          {
+            "name": "Cappuccino",
+            "price": 120
+          },
+          {
+            "name": "Latte",
+            "price": 120
+          },
+          {
+            "name": "Hot Chocolate",
+            "price": 120
+          },
+          {
+            "name": "Mocha",
+            "price": 120
+          }
+        ]
+      },
+      {
+        "category": "Beers",
+        "items": [
+          {
+            "name": "Efes Draught Small 33cl",
+            "price": 110
+          },
+          {
+            "name": "Efes Draught Large 50cl",
+            "price": 120
+          },
+          {
+            "name": "Efes Draught XXL 1lt",
+            "price": 230
+          },
+          {
+            "name": "Shandy",
+            "price": 150
+          },
+          {
+            "name": "Efes Bottle 50cl",
+            "price": 180
+          },
+          {
+            "name": "Efes Özel Seri 50cl",
+            "price": 200
+          },
+          {
+            "name": "Efes Gluten Free 50cl",
+            "price": 220
+          },
+          {
+            "name": "Bomonti Bottle 50cl",
+            "price": 200
+          },
+          {
+            "name": "Belfast Bottle 50cl",
+            "price": 220
+          },
+          {
+            "name": "Bud Bottle 50cl",
+            "price": 220
+          },
+          {
+            "name": "Corona Bottle 33cl",
+            "price": 220
+          },
+          {
+            "name": "Miller Bottle 33cl",
+            "price": 180
+          },
+          {
+            "name": "Gara Guzu Bottle 33cl",
+            "price": 220
+          },
+          {
+            "name": "Heineken Bottle 33cl",
+            "price": 220
+          },
+          {
+            "name": "Stella Artois 44cl",
+            "price": 220
+          },
+          {
+            "name": "Tipsi House Wine (glass)",
+            "price": 270
+          },
+          {
+            "name": "Tipsi House Cider",
+            "price": 290
+          },
+          {
+            "name": "Bottle of Wine",
+            "price": 1100
+          }
+        ]
+      },
+      {
+        "category": "Spirits",
+        "items": [
+          {
+            "name": "Yeni Raki",
+            "price": 250
+          },
+          {
+            "name": "Raki-Lemonade",
+            "price": 250
+          },
+          {
+            "name": "Gilbey's Vodka",
+            "price": 250
+          },
+          {
+            "name": "Gilbey's Gin",
+            "price": 250
+          },
+          {
+            "name": "Absolut Vodka",
+            "price": 300
+          },
+          {
+            "name": "Smirnoff Vodka",
+            "price": 300
+          },
+          {
+            "name": "Gordon's Dry Gin",
+            "price": 300
+          },
+          {
+            "name": "Gordon's Pink Gin",
+            "price": 300
+          },
+          {
+            "name": "Bacardi",
+            "price": 300
+          },
+          {
+            "name": "Malibu",
+            "price": 300
+          },
+          {
+            "name": "Tia Maria",
+            "price": 300
+          },
+          {
+            "name": "Captain Morgan",
+            "price": 300
+          },
+          {
+            "name": "Bailey's",
+            "price": 300
+          },
+          {
+            "name": "Archers",
+            "price": 300
+          },
+          {
+            "name": "Southern Comfort",
+            "price": 300
+          },
+          {
+            "name": "Martini Bianco",
+            "price": 300
+          },
+          {
+            "name": "Cognac",
+            "price": 300
+          },
+          {
+            "name": "Tequila",
+            "price": 300
+          },
+          {
+            "name": "Jagermeister",
+            "price": 300
+          },
+          {
+            "name": "Jack Daniel's",
+            "price": 350
+          },
+          {
+            "name": "J. Walker Black",
+            "price": 350
+          },
+          {
+            "name": "Jameson",
+            "price": 350
+          }
+        ]
+      }
+    ],
+    "_meta": {
+      "cuisine_inferred": true,
+      "missing_fields": [
+        "waterfront",
+        "score",
+        "reviews",
+        "address",
+        "mapUrl",
+        "whatsapp",
+        "photos"
+      ]
+    }
+  }
+]
