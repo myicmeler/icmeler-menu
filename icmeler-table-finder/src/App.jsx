@@ -210,7 +210,8 @@ const selectStyle = {
   border: "1px solid #4A4A50",
   borderRadius: 8,
   padding: "7px 8px",
-  fontSize: 12,
+  fontSize: 16,
+  minHeight: 44,
   fontFamily: "inherit",
   outline: "none",
   flex: 1,
@@ -262,13 +263,37 @@ export default function IcmelerTableFinder() {
     >
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        * { box-sizing: border-box; }
+        body { margin: 0; background: #2A2A2D; }
+        button, input, select { font-family: inherit; }
+        button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+          outline: 2px solid #F2A93B; outline-offset: 3px;
+        }
+        .page-shell { max-width: 1440px; margin: 0 auto; padding: 20px 14px 60px; }
+        .page-title { font-size: clamp(18px, 2.5vw, 30px); font-weight: 700; color: #F2A93B; }
+        .search-controls { display: grid; gap: 10px; margin-bottom: 20px; }
+        .filter-controls { display: flex; gap: 8px; min-width: 0; }
+        .results-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; align-items: start; }
+        .restaurant-card { min-width: 0; overflow-wrap: anywhere; border-radius: 10px; padding: 16px; }
+        .gallery-panel { width: 100%; max-width: 720px; max-height: calc(100dvh - 32px); overflow-y: auto; }
+        .gallery-image { position: relative; height: clamp(160px, 50vw, 400px); max-height: 60dvh; }
+        @media (min-width: 700px) {
+          .page-shell { padding: 32px 24px 64px; }
+          .results-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+          .search-controls { grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr); }
+        }
+        @media (min-width: 1100px) {
+          .page-shell { padding: 40px 32px 72px; }
+          .results-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+        }
         select option { background: #3A3A3F; color: #F5F5F4; }
         .card { background: #35353A; border: 1px solid #45454B; }
         .pill-cta {
           display: inline-flex;
           align-items: center;
           gap: 4px;
-          font-size: 11px;
+          font-size: 12px;
+          min-height: 44px;
           font-weight: 600;
           border-radius: 16px;
           padding: 5px 9px;
@@ -286,8 +311,8 @@ export default function IcmelerTableFinder() {
           background: rgba(0,0,0,0.35);
           border: none;
           color: #F5F5F4;
-          width: 32px;
-          height: 32px;
+          width: 44px;
+          height: 44px;
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -296,19 +321,21 @@ export default function IcmelerTableFinder() {
         }
       `}</style>
 
-      <div style={{ maxWidth: 480, margin: "0 auto", padding: "18px 14px 60px" }}>
+      <div className="page-shell">
         {/* Header strip */}
         <div
           style={{
             display: "flex",
             justifyContent: "space-between",
             alignItems: "baseline",
+            flexWrap: "wrap",
+            gap: 8,
             paddingBottom: 10,
             borderBottom: "1px solid #F2A93B44",
             marginBottom: 14,
           }}
         >
-          <span style={{ fontSize: 16, fontWeight: 700, color: "#F2A93B" }}>
+          <span className="page-title">
             İçmeler · Table Finder
           </span>
           <span style={{ fontSize: 11, color: "#9A9A9E" }}>
@@ -316,6 +343,7 @@ export default function IcmelerTableFinder() {
           </span>
         </div>
 
+        <div className="search-controls">
         {/* Search bar */}
         <div
           className="card"
@@ -325,11 +353,12 @@ export default function IcmelerTableFinder() {
             gap: 8,
             padding: "9px 12px",
             borderRadius: 9,
-            marginBottom: 8,
+            minWidth: 0,
           }}
         >
           <Search size={15} color="#F2A93B" />
           <input
+            aria-label="Search restaurants or dishes"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Try 'sea bass', 'meze'…"
@@ -337,7 +366,9 @@ export default function IcmelerTableFinder() {
               border: "none",
               outline: "none",
               background: "transparent",
-              fontSize: 13,
+              fontSize: 16,
+              minWidth: 0,
+              minHeight: 26,
               flex: 1,
               fontFamily: "inherit",
               color: "#F5F5F4",
@@ -346,17 +377,19 @@ export default function IcmelerTableFinder() {
         </div>
 
         {/* Dropdown filters — cuisine (incl. Drinks) + price */}
-        <div style={{ display: "flex", gap: 6, marginBottom: 16 }}>
-          <select value={cuisine} onChange={(e) => setCuisine(e.target.value)} style={selectStyle}>
+        <div className="filter-controls">
+          <select aria-label="Cuisine" value={cuisine} onChange={(e) => setCuisine(e.target.value)} style={selectStyle}>
             {CUISINES.map((c) => (
               <option key={c} value={c}>{c}</option>
             ))}
           </select>
-          <select value={tierLabel} onChange={(e) => setTierLabel(e.target.value)} style={selectStyle}>
+          <select aria-label="Price tier" value={tierLabel} onChange={(e) => setTierLabel(e.target.value)} style={selectStyle}>
             {TIERS.map((t) => (
               <option key={t} value={t}>{t}</option>
             ))}
           </select>
+        </div>
+
         </div>
 
         {results.length === 0 && (
@@ -366,11 +399,11 @@ export default function IcmelerTableFinder() {
         )}
 
         {/* Results */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+        <div className="results-grid">
           {results.map((r) => {
             const isOpen = expanded.has(r.id);
             return (
-              <div key={r.id} className="card" style={{ borderRadius: 10, padding: "12px 14px" }}>
+              <div key={r.id} className="card restaurant-card">
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 10 }}>
                   <div>
                     <div style={{ fontSize: 19, fontWeight: 700, color: "#F2A93B" }}>{r.score.toFixed(1)}</div>
@@ -379,7 +412,7 @@ export default function IcmelerTableFinder() {
                     </div>
                   </div>
 
-                  <div style={{ flex: 1 }}>
+                  <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ fontSize: 15, fontWeight: 700, color: "#F5F5F4" }}>{r.name}</div>
                     <div style={{ fontSize: 12, color: "#B4B4B8", marginTop: 2 }}>
                       {r.cuisine} · {"₺".repeat(r.tier)} · ~₺{r.avgPrice} pp
@@ -402,10 +435,9 @@ export default function IcmelerTableFinder() {
                   style={{
                     marginTop: 10,
                     display: "flex",
-                    flexWrap: "nowrap",
+                    flexWrap: "wrap",
                     justifyContent: "flex-start",
                     gap: 5,
-                    overflowX: "auto",
                     paddingBottom: 2,
                   }}
                 >
@@ -425,10 +457,10 @@ export default function IcmelerTableFinder() {
                     <MessageCircle size={11} />
                     WhatsApp
                   </a>
-                  <div className="pill-cta pill-menu" onClick={() => toggle(r.id)} style={{ flexShrink: 0 }}>
+                  <button type="button" aria-expanded={isOpen} className="pill-cta pill-menu" onClick={() => toggle(r.id)} style={{ flexShrink: 0 }}>
                     {isOpen ? "Hide menu" : "View menu"}
                     {isOpen ? <ChevronUp size={11} /> : <ChevronDown size={11} />}
-                  </div>
+                  </button>
                 </div>
 
                 {isOpen && (
@@ -450,9 +482,9 @@ export default function IcmelerTableFinder() {
                               fontWeight: r.matchInfo.dish === item.name ? 600 : 400,
                             }}
                           >
-                            <span>{item.name}</span>
+                            <span style={{ minWidth: 0, overflowWrap: "anywhere" }}>{item.name}</span>
                             <span className="dotted-leader" />
-                            <span>₺{item.price}</span>
+                            <span style={{ flexShrink: 0 }}>₺{item.price}</span>
                           </div>
                         ))}
                       </div>
@@ -485,27 +517,30 @@ export default function IcmelerTableFinder() {
           }}
         >
           <div
+            className="gallery-panel"
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${activeRestaurant.name} photos`}
             onClick={(e) => e.stopPropagation()}
             style={{
               width: "100%",
-              maxWidth: 380,
               background: "#1E1E20",
               borderRadius: 12,
-              overflow: "hidden",
               border: "1px solid #45454B",
             }}
           >
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "10px 14px" }}>
               <span style={{ fontSize: 13, fontWeight: 700, color: "#F5F5F4" }}>{activeRestaurant.name}</span>
               <button
+                aria-label="Close photos"
                 onClick={() => setGallery(null)}
-                style={{ background: "transparent", border: "none", color: "#9A9A9E", cursor: "pointer" }}
+                style={{ background: "transparent", border: "none", color: "#9A9A9E", cursor: "pointer", minWidth: 44, minHeight: 44, flexShrink: 0 }}
               >
                 <X size={18} />
               </button>
             </div>
 
-            <div style={{ position: "relative", height: 220, background: activeRestaurant.photos[gallery.index].color }}>
+            <div className="gallery-image" style={{ background: activeRestaurant.photos[gallery.index].color }}>
               <div
                 style={{
                   position: "absolute",
@@ -525,6 +560,7 @@ export default function IcmelerTableFinder() {
                 <>
                   <button
                     className="modal-nav"
+                    aria-label="Previous photo"
                     onClick={() => stepPhoto(-1)}
                     style={{ position: "absolute", left: 8, top: "50%", transform: "translateY(-50%)" }}
                   >
@@ -532,6 +568,7 @@ export default function IcmelerTableFinder() {
                   </button>
                   <button
                     className="modal-nav"
+                    aria-label="Next photo"
                     onClick={() => stepPhoto(1)}
                     style={{ position: "absolute", right: 8, top: "50%", transform: "translateY(-50%)" }}
                   >
